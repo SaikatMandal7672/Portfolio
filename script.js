@@ -17,7 +17,6 @@ const textTransform = () => {
   });
 };
 
-
 let tl = gsap.timeline();
 
 tl.delay(1);
@@ -62,20 +61,20 @@ const introAnimation = () => {
 
     .to(".transition-screen", {
       bottom: "100vh",
-      duration: .9,
-      delay: -.8,
+      duration: 0.9,
+      delay: -0.8,
       ease: Power4.Out,
     });
 };
 const heroAnimation = () => {
   tl.delay(0);
   tl.from(".hero .fd .parent .child", {
-      duration: 2,
-      delay:-1,
-      y: "250%",
-      ease: Circ.easeInOut,
-      stagger: 0.3,
-    })
+    duration: 2,
+    delay: -1,
+    y: "250%",
+    ease: Circ.easeInOut,
+    stagger: 0.3,
+  })
     .to(".intro", {
       height: 0,
       delay: -1,
@@ -84,35 +83,43 @@ const heroAnimation = () => {
     })
     .from(".hero p .parent .child", {
       duration: 2,
-      delay:-1,
+      delay: -1,
       y: "250%",
       ease: Circ.easeInOut,
       stagger: 0.3,
-    })
+    });
 };
 const webtext = () => {
-  gsap.set('g',{
-    autoAlpha:1,
-  })
-  gsap.to('svg',{
-    scale:1.2,
-    duration:1,
-  })
-  tl.from(".st0",{
-    yPercent:130,
-    stagger:0.1,
-    scaleY:.5,
-    skewX:30,
-    skewY:60,
-    opacity:0,
-    duration:.359,
+  gsap.set("g", {
+    autoAlpha: 1,
+  });
+  gsap.to("svg", {
+    scale: 1.2,
+    duration: 1,
+  });
+  tl.from(".st0", {
+    yPercent: 130,
+    stagger: 0.1,
+    scaleY: 0.5,
+    skewX: 30,
+    skewY: 60,
+    opacity: 0,
+    duration: 0.359,
     delay: -2,
   });
-}
+};
+const aboutMeAnimation = () => {
+  gsap.from("section .about-me", {
+    opacity: 0,
+    y: 100,
+    duration: 1,
+    delay: 5,
+    ease: Power4.inOut,
+  });
+};
 
 textTransform();
 introAnimation();
 heroAnimation();
 webtext();
-
-
+aboutMeAnimation();

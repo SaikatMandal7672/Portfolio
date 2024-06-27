@@ -33,7 +33,7 @@ section.main {
     background-color: black;
     color: rgb(204, 255, 255);
     font-weight: 100;
-    display: none;
+    display: flex;
     justify-content: center;
 
 }
@@ -166,7 +166,7 @@ section.main {
 
 section .hero {
     /* position: absolute; */
-    height: 200vh;
+    height: 250vh;
     width: 100%;
     background-color: #e0e0e0;
     display: flex;
@@ -305,7 +305,6 @@ g {
     letter-spacing: 1px;
     line-height: 24px;
     font-size: 20px;
-    background-color: #10aeb1;
     font-weight: 500;
 }
 
