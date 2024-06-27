@@ -33,7 +33,7 @@ section.main {
     background-color: black;
     color: rgb(204, 255, 255);
     font-weight: 100;
-    display: none;
+    display: flex;
     justify-content: center;
 
 }
