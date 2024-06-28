@@ -12,22 +12,26 @@ body {
     width: 100%;
 }
 
-main {
+.main {
     overflow-x: hidden;
     width: 100%;
     position: relative;
 }
 
-section.main {
+section .main {
     height: 100vh;
     width: 100%;
     position: relative;
     background-color: rgb(214, 214, 214);
 }
 
+a {
+    text-decoration: none;
+}
+
 /* -------------intro page ---------------- */
 .intro {
-    position: absolute;
+    position: fixed;
     height: 100vh;
     width: 100%;
     background-color: black;
@@ -155,7 +159,7 @@ section.main {
 
 .transition-screen {
     position: absolute;
-    bottom: 0;
+    bottom: 575vh;
     height: 0;
     width: 100vw;
     background-color: #13c5c8;
@@ -166,16 +170,16 @@ section.main {
 
 section .hero {
     /* position: absolute; */
-    height: 250vh;
+    height: 175vh;
     width: 100%;
-    background-color: #e0e0e0;
+    background-color: #FCFAF8;
     display: flex;
     flex-direction: column;
 }
 
 .hero nav {
     width: 100%;
-    position: absolute;
+    position: fixed;
     padding: 3vw 6vw;
     display: flex;
     z-index: 10;
@@ -317,7 +321,8 @@ g {
     font-style: normal;
 }
 
-.about-me .right-imgs{
+.about-me .right-imgs {
+    opacity: 0;
     position: relative;
     width: 60%;
     height: auto;
@@ -325,36 +330,203 @@ g {
     align-items: center;
     justify-content: center;
     height: 400px;
+    z-index: 1111;
 }
-.right-imgs .skills{
+
+.right-imgs .skills {
     position: absolute;
-    width: 30vw;
-    height: 45vw;
-    border-radius: 3vw;
+    width: 27vw;
+    height: 40vw;
+    border-radius: 2vw;
+    filter: grayscale();
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
     background-color: #aa5656;
 }
-.skills:nth-child(1){
-    transform: translate(-25% , -10%) rotate(-25deg);
+
+.right-imgs .skills:hover {
+    filter: grayscale(0);
+    z-index: 1;
+}
+
+.skills:nth-child(1) {
+    transform: translate(-25%, -10%) rotate(-25deg);
     background-image: url(./assets/apple.jpg);
-    background-size:cover;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
 
-    
+
 }
-.skills:nth-child(2){
-    transform: translate(0%,0%) rotate(-15deg);
+
+.skills:nth-child(2) {
+    transform: translate(0%, 0%) rotate(-15deg);
     background-image: url(./assets/food\ delivery.png);
-    background-size:cover;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
     background-color: #9c59b68e;
 }
-.skills:nth-child(3){
-    transform: translate(25% ,10%) rotate(-5deg);
+
+.skills:nth-child(3) {
+    transform: translate(25%, 10%) rotate(-5deg);
     background-image: url(./assets/weather.jpg);
-    background-size:contain;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     background-color: #38434395;
+}
+
+/* --------------SKILL section ---------*/
+.skill-set {
+    padding-top: 150px;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #F2F2F2;
+    padding: 10vw 0;
+}
+
+.skill-set::before {
+    content: "";
+    position: absolute;
+    top: -75px;
+    transform: rotate(-180deg);
+    width: 100%;
+    height: 150px;
+    background-image: url(https://abhishekjha.me/rip.f6d7c4dd.svg);
+    background-size: cover;
+}
+
+.skill-set .elements {
+    position: absolute;
+    height: 90vh;
+    width: 100%;
+    padding: 6vw;
+    padding-top: 15vw;
+}
+
+.skill-set .elements p {
+    margin-bottom: 1vw;
+    font-size: 2.5vh;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.underline {
+    width: 100%;
+    height: auto;
+    margin-bottom: 2vw;
+}
+
+.line {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #000000;
+}
+
+.skill-set .list {
+    margin-top: 8vw;
+}
+
+.skill-set .bottone1 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1vw;
+    font-size: 2vw;
+    height: 6vw;
+    padding-left: 33px;
+    padding-right: 33px;
+    padding-bottom: 16px;
+    padding-top: 16px;
+    border-radius: 9px;
+    background: #0ee8d6;
+    border: none;
+    font-family: inherit;
+
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.bottone1:hover {
+    box-shadow: 7px 5px 56px -14px #00889d;
+}
+
+.bottone1:active {
+    transform: scale(0.97);
+    box-shadow: 7px 5px 56px -10px #0074d9;
+}
+
+.skill-set .elements .list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vw;
+}
+
+/*------------------PROJECTS---------------- */
+section .projects {
+    padding: 8vw 6vw;
+    background-color: #F2F2F2;
+    height: 400vh;
+    width: 100%;
+}
+
+.projects h1 {
+    color: #454444;
+    font-size: 10vw;
+    font-weight: 400;
+}
+
+.projects h1 span {
+    font-family: "Playwrite US Trad", cursive;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: capitalize;
+    color: #10aeb1;
+    font-style: normal;
+}
+
+.projects svg {
+    stroke: #706c6c93;
+    transform: rotate(90deg);
+}
+
+.projects .heading {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.projects-imgs {
+    width: 100%;
+    margin-top: 10vw;
+}
+
+.projects-imgs .row-1 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    gap: 4vw;
+    /* background-color: #b31e1e; */
+}
+
+.projects .img-container-1 {
+    width: 40%;
+    overflow: hidden;
+
+}
+
+.projects .img-container-1 img {
+    width: 100%;
+}
+
+.projects .img-container-2 {
+    width: 60%;
+    overflow: hidden;
+}
+
+.projects .img-container-2 img {
+    width: 100%;
 }

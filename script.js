@@ -1,3 +1,4 @@
+
 const textTransform = () => {
   var reveal = document.querySelectorAll(".reveal");
 
@@ -60,7 +61,7 @@ const introAnimation = () => {
     })
 
     .to(".transition-screen", {
-      bottom: "100vh",
+      bottom: "675vh",
       duration: 0.9,
       delay: -0.8,
       ease: Power4.Out,
@@ -109,17 +110,52 @@ const webtext = () => {
   });
 };
 const aboutMeAnimation = () => {
-  gsap.from("section .about-me", {
-    opacity: 0,
-    y: 100,
+  tl.to("section .right-imgs", {
+    opacity: 1,
+    y: -50,
     duration: 1,
-    delay: 5,
+    delay: -1,
     ease: Power4.inOut,
-  });
+  })
+    .to(".right-imgs .skills:nth-child(1)", {
+      // rotation: -15,
+      duration: 1,
+      delay: -1,
+    })
+    .to(".right-imgs .skills:nth-child(2)", {
+      // rotation: -5,
+      duration: 1,
+      delay: -1,
+    })
+    .to(".right-imgs .skills:nth-child(3)", {
+      // rotation: 5,
+      duration: 1,
+      delay: -1,
+    });
 };
 
+const timeFunction = () => {
+  setInterval(() => {
+    let hrs = document.querySelector(".hrs");
+    let min = document.querySelector(".min");
+    let sec = document.querySelector(".sec");
+    let currentTime = new Date();
+
+    hrs.textContent = currentTime.getHours();
+    min.textContent = currentTime.getMinutes();
+    sec.textContent = currentTime.getSeconds();
+  }, 1000);
+};
+
+
+timeFunction();
 textTransform();
 introAnimation();
 heroAnimation();
 webtext();
 aboutMeAnimation();
+const scroll = new LocomotiveScroll({
+  el: document.querySelector('.main'),
+  smooth: true,
+});
+

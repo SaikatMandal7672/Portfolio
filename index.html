@@ -10,10 +10,11 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Playwrite+US+Trad:wght@100..400&display=swap"
             rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.css">
     </head>
 
     <body>
-        <main>
+        <div class="main">
             <section class="main">
                 <div class="intro">
                     <div class="intro-text">
@@ -51,7 +52,7 @@
                                 d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,7,16l8-8Z"
                                 transform="translate(30)"></path>
                         </a>
-                        <a class="cta">
+                        <a class="cta" href="https://github.com/SaikatMandal7672" target="_blank">
                             <span class="hover-underline-animation">github</span>
                             <path id="Path_10" data-name="Path 10"
                                 d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,7,16l8-8Z"
@@ -63,7 +64,8 @@
                                 d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,7,16l8-8Z"
                                 transform="translate(30)"></path>
                         </a>
-                        <a class="cta">
+                        <a href="https://drive.google.com/file/d/1A7QdME4o1I8jPTqrivFRG4c6n-elFcxO/view?usp=drive_link"
+                            target="_blank" class="cta">
                             <span class="hover-underline-animation">Resume</span>
                             <path id="Path_10" data-name="Path 10"
                                 d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,7,16l8-8Z"
@@ -74,8 +76,10 @@
                         <div class="text">
                             <div class="text-1">
                                 <h1 class="fd reveal">Frontend</h1>
-                                <p class="reveal">Creating frontend web applications <br> with incredible ui design and interactions </p>
-                                <p class="reveal">My local time 12:50</span><br>GMT(+5:30)</p>
+                                <p class="reveal">Creating frontend web applications <br> with incredible ui design <br>
+                                    and interactions </p>
+                                <p class="reveal">My local time <br> <span class="hrs">12</span>: <span
+                                        class="min">50</span>:<span class="sec">00</span><br>GMT(+5:30)</p>
                             </div>
 
                             <div class="text-2">
@@ -149,8 +153,9 @@
                     <section class="about-me">
                         <div class="left-text">
                             <p>
-                                i am Saikat Mandal ,<br> an engineering student at <br> jadavpur university, <br> Electronics
-                                and Telecommunications 
+                                i am Saikat Mandal ,<br> an engineering student at <br> jadavpur university, <br>
+                                Electronics
+                                and Telecommunications
                                 <br>engineering.<br> developing <span>visually
                                     pleasing</span> yet <br>functional & user friendly <br>frontend applications
                             </p>
@@ -162,14 +167,63 @@
                         </div>
                     </section>
                 </section>
+                <div class="skill-set">
+                    <div class="elements">
+                        <div class="underline">
+                            <p>Things I am good at</p>
+                            <span class="line"></span>
+                        </div>
+                        <div class="list">
+
+                            <button class="bottone1"><strong>Java</strong></button>
+                            <button class="bottone1"><strong>C Programming</strong></button>
+                            <button class="bottone1"><strong>HTML</strong></button>
+                            <button class="bottone1"><strong>CSS</strong></button>
+                            <button class="bottone1"><strong>Tailwind</strong></button>
+                            <button class="bottone1"><strong>JavaScript</strong></button>
+                            <button class="bottone1"><strong>ReactJs</strong></button>
+                            <button class="bottone1"><strong>FetchAPI</strong></button>
+                            <button class="bottone1"><strong>React Hooks </strong></button>
+                            <button class="bottone1"><strong>React Routes</strong></button>
+                            <button class="bottone1"><strong>Redux</strong></button>
+                        </div>
+                    </div>
+                </div>
+                <section class="projects">
+                    <div class="underline">
+                        <div class="heading">
+                            <h1> Pro<span>j</span>ects</h1>
+                            <svg class="o-ui-arrow" width="64" height="64" viewBox="0 0 64 64" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.10162 3.10156L62.9999 62.9999" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <path d="M63 1.00001L63 63L0.999989 63" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                            </svg>
+                        </div>
+                        <span class="line"></span>
+
+                        <div class="projects-imgs">
+                            <div class="row-1">
+                                <div class="img-container-1">
+                                    <img data-scroll data-scroll-speed="-1.3" src="./assets/food delivery.png" alt="">
+                                </div>
+                                <div class="img-container-2">
+                                    <img data-scroll data-scroll-speed="1" src="./assets/apple-2.jpeg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
             </section>
-        </main>
+        </div>
 
 
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-            integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/1.0.6/ScrollTrigger.min.js" ></script>
+        <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
         <script src="script.js"></script>
     </body>
 
