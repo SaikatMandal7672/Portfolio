@@ -1,4 +1,4 @@
-
+gsap.registerPlugin(ScrollTrigger);
 const textTransform = () => {
   var reveal = document.querySelectorAll(".reveal");
 
@@ -20,17 +20,18 @@ const textTransform = () => {
 
 let tl = gsap.timeline();
 
-tl.delay(1);
-
 const introAnimation = () => {
-  tl.from(".intro .parent .child span", {
-    duration: 1,
-    opacity: 0.5,
-    x: 200,
-    y: 200,
-    stagger: 0.1,
-    ease: Circ.easeInOut,
+  tl.to(".center-text", {
+    opacity: 1,
   })
+    .from(".intro .parent .child span", {
+      duration: 1,
+      opacity: 0.5,
+      x: 200,
+      y: 200,
+      stagger: 0.1,
+      ease: Circ.easeInOut,
+    })
 
     .to(".intro .parent .child", {
       duration: 2,
@@ -62,7 +63,7 @@ const introAnimation = () => {
 
     .to(".transition-screen", {
       bottom: "675vh",
-      duration: 0.9,
+      duration: 1,
       delay: -0.8,
       ease: Power4.Out,
     });
@@ -116,22 +117,7 @@ const aboutMeAnimation = () => {
     duration: 1,
     delay: -1,
     ease: Power4.inOut,
-  })
-    .to(".right-imgs .skills:nth-child(1)", {
-      // rotation: -15,
-      duration: 1,
-      delay: -1,
-    })
-    .to(".right-imgs .skills:nth-child(2)", {
-      // rotation: -5,
-      duration: 1,
-      delay: -1,
-    })
-    .to(".right-imgs .skills:nth-child(3)", {
-      // rotation: 5,
-      duration: 1,
-      delay: -1,
-    });
+  });
 };
 
 const timeFunction = () => {
@@ -147,15 +133,46 @@ const timeFunction = () => {
   }, 1000);
 };
 
+function cardHoverEffect() {
+  document.querySelectorAll(".cnt").forEach(function (cnt) {
+    let vis;
+    console.log(cnt);
+      cnt.addEventListener("mousemove", function (dets) {
+        vis = dets.target;
+        let idx = dets.target.dataset.index;
+        document.querySelector("#cursor").children[idx].style.opacity = 1;
+        document.querySelector("#cursor").children[
+          idx
+        ].style.transform = `translate(calc(${dets.clientX - 8}px),${
+          dets.clientY - 20
+        }px)`;
 
-timeFunction();
+        document.querySelector(".skill-set").style.backgroundColor =
+          dets.target.dataset.color;
+        document.querySelector(".projects").style.backgroundColor =
+          dets.target.dataset.color;
+      });
+    
+
+    cnt.addEventListener("mouseleave", function (dets) {
+      let idx = vis.dataset.index;
+      document.querySelector("#cursor").children[idx].style.opacity = 0;
+      document.querySelector(".skill-set").style.backgroundColor = "#f2f2f2";
+      document.querySelector(".projects").style.backgroundColor = "#f2f2f2";
+    });
+  });
+}
+
+cardHoverEffect();
+tl.delay(1);
 textTransform();
 introAnimation();
 heroAnimation();
+timeFunction();
 webtext();
 aboutMeAnimation();
+
 const scroll = new LocomotiveScroll({
-  el: document.querySelector('.main'),
+  el: document.querySelector(".main"),
   smooth: true,
 });
-
