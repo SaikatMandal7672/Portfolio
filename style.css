@@ -568,7 +568,7 @@ section .projects {
     transform: translateY(-10vw);
     width: 45%;
     overflow: hidden;
-    
+
 }
 
 .projects .img-container-4 img {
@@ -880,6 +880,7 @@ section .projects {
         opacity: 0;
     }
 }
+
 /* ------------- CONTACT ME -------------- */
 .contact-form {
     position: relative;
@@ -1031,13 +1032,19 @@ textarea.input {
 }
 
 @media(max-width:850px) {
+    .contact {
+        display: none;
+    }
+
     .item {
         margin: 0 2vw;
         grid-template-columns: 1fr;
     }
-    .submit-form{
+
+    .submit-form {
         width: 100vw;
     }
+
     .contact {
         display: none;
     }
