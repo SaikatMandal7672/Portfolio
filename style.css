@@ -162,7 +162,7 @@ a {
     position: absolute;
     /* bottom: 80%;
      */
-    bottom: 575vh;
+    bottom: 505vh;
     height: 1px;
     width: 100vw;
     background-color: #13c5c8;
@@ -268,8 +268,6 @@ section .hero {
 }
 
 .hero-text .text-2 {
-
-
     right: 0;
     height: 12vw;
     display: flex;
@@ -296,8 +294,9 @@ g {
 
 /* -----------------ABOUT ME--------------- */
 .about-me {
+    position: relative;
     width: 100%;
-    margin-top: 25vh;
+    margin-top: 15vh;
     padding: 0 6vw;
     text-transform: uppercase;
     display: flex;
@@ -305,11 +304,13 @@ g {
 }
 
 .about-me .left-text {
+    top: 5%;
+    position: absolute;
     width: 40%;
     height: auto;
     letter-spacing: 1px;
-    line-height: 24px;
-    font-size: 20px;
+    line-height: 30px;
+    font-size: 28px;
     font-weight: 500;
 }
 
@@ -323,6 +324,7 @@ g {
 }
 
 .about-me .right-imgs {
+    left: 45%;
     opacity: 0;
     position: relative;
     width: 60%;
@@ -382,9 +384,9 @@ g {
     padding-top: 150px;
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     background-color: #F2F2F2;
-    padding: 10vw 0;
+    padding-top: 10vw;
     transition: background-color cubic-bezier(0.175, 0.885, 0.32, 1.275) .6s;
 }
 
@@ -401,10 +403,9 @@ g {
 
 .skill-set .elements {
     position: absolute;
-    height: 90vh;
+    height: 60vh;
     width: 100%;
-    padding: 6vw;
-    padding-top: 15vw;
+    padding: 3vw 6vw;
 }
 
 .skill-set .elements p {
@@ -467,9 +468,9 @@ g {
 
 /*------------------PROJECTS---------------- */
 section .projects {
-    padding: 8vw 6vw;
+    padding: 0vw 6vw;
     background-color: #F2F2F2;
-    height: 300vh;
+    height: 250vh;
     width: 100%;
     transition: background-color cubic-bezier(0.175, 0.885, 0.32, 1.275) .6s;
 
@@ -504,12 +505,12 @@ section .projects {
 }
 
 .projects-imgs {
+    position: relative;
     display: flex;
     flex-direction: column;
-    /* height: 200vh; */
-    gap: 10vw;
+    gap: 5vw;
     width: 100%;
-    margin-top: 10vw;
+    margin-top: 5vw;
 }
 
 .projects-imgs .row-1 {
@@ -518,18 +519,18 @@ section .projects {
     gap: 4vw;
     /* background-color: #b31e1e; */
 }
-
 .projects .img-container-1 {
     position: relative;
-    top: 10vw;
     height: 30vw;
     width: 55%;
     overflow: hidden;
+    border-radius: 2vw;
 
 }
 
 .projects .img-container-1 img {
-    width: 106%;
+    width: 100%;
+    border-radius: 2vw;
 }
 
 .projects .img-container-2 {
@@ -537,11 +538,13 @@ section .projects {
     height: 49vw;
     width: 50%;
     overflow: hidden;
+    border-radius: 2vw;
 }
 
 .projects .img-container-2 img {
     position: relative;
-    width: 105%;
+    width: 100%;
+    border-radius: 2vw;
 }
 
 .projects-imgs .row-2 {
@@ -555,24 +558,28 @@ section .projects {
     position: relative;
     width: 60%;
     height: 23vw;
+    border-radius: 2vw;
     overflow: hidden;
 }
 
 .projects .img-container-3 img {
     width: 100%;
+    border-radius: 2vw;
 }
 
 .projects .img-container-4 {
     position: relative;
     height: 50vw;
-    transform: translateY(-10vw);
+    transform: translateY(-20vw);
     width: 45%;
     overflow: hidden;
+    border-radius: 2vw;
 
 }
 
 .projects .img-container-4 img {
-    width: 105%;
+    width: 100%;
+    border-radius: 2vw;
     object-position: top;
 }
 

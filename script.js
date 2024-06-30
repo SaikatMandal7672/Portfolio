@@ -62,7 +62,7 @@ const introAnimation = () => {
     })
 
     .to(".transition-screen", {
-      bottom: "675vh",
+      bottom: "605vh",
       duration: 1,
       delay: -0.8,
       ease: Power4.Out,
